@@ -1,0 +1,44 @@
+{
+  "name": "vue-pwa",
+  "version": "1.0.0",
+  "description": "test vue-pwa",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p --mode production",
+    "build:dev": "webpack -d --mode development",
+    "dev": "webpack-dev-server --progress --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailet37/vue-pwa.git"
+  },
+  "author": "alina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailet37/vue-pwa/issues"
+  },
+  "homepage": "https://github.com/ailet37/vue-pwa#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^5.0.0",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "vue-loader": "^15.6.4",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "firebase": "^5.8.4",
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "vue": "^2.6.7",
+    "vue-router": "^3.0.2"
+  }
+}
