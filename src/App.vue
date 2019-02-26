@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ul>
+    <!-- <ul>
       <li v-for="(link, index) in links" :key="index">
         <router-link :to="link.to">{{ link.name }}</router-link>
       </li>
-    </ul>
+    </ul> -->
     <main>
       <router-view/>
     </main>
@@ -36,10 +36,6 @@ export default {
       {
         name: 'Home',
         to: '/'
-      },
-      {
-        name: 'Page 1',
-        to: '/page-1'
       },
       {
         name: 'Bad Link',
