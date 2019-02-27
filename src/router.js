@@ -17,7 +17,7 @@ export default new Router({
       component: PusheenHome
     },
     {
-      path: '**',
+      path: '*',
       name: 'PageNotFound',
       component: PageNotFound
     }
