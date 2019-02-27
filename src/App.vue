@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   ul {
     list-style: none;
     display: flex;

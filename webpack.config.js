@@ -46,12 +46,12 @@ module.exports = (env, argv) => ({
         loader: 'babel-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ],
-        exclude: /\.module\.css$/
       }
     ]
   },
@@ -84,7 +84,7 @@ module.exports = (env, argv) => ({
     new SWPrecacheWebpackPlugin({
       cacheId: 'vue-pwa',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css}', '/'],
+      staticFileGlobs: ['dist/**/*.{js,html,css,png}', '/'],
       minify: true,
       stripPrefix: 'dist/',
     }),
