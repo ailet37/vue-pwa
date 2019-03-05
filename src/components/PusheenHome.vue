@@ -2,6 +2,8 @@
   <section class="game">
     <h1>{{textTitle ? textTitle : 'Choose the bowl and find Pusheen'}}</h1>
 
+    <h2>Pusheen & You {{defeats}}:{{wins}}</h2>
+
     <transition-group
       class="bowl-wrapper"
       :class="{'bowl-wrapper--disabled': gameOver}"
@@ -32,8 +34,14 @@
 
 <style lang="scss" scoped>
 .game {
-  h1 {
+  width: 100%;
+
+  h1,
+  h2 {
     text-align: center;
+  }
+  h2 {
+    margin-top: 30px;
   }
 
   &__button {
@@ -51,7 +59,7 @@
 
 .bowl-wrapper {
   max-width: 800px;
-  margin: 150px auto;
+  margin: 100px auto;
   display: flex;
   justify-content: space-between;
 
@@ -122,7 +130,9 @@ export default {
       ],
       textTitle: "",
       gameOver: false,
-      gameWin: false
+      gameWin: false,
+      wins: 0,
+      defeats: 0
     };
   },
   computed: {
@@ -141,9 +151,11 @@ export default {
       if (id === this.pusheenRandomBowlId) {
         this.gameWin = true;
         this.textTitle = "Congrats!";
+        this.wins++;
       } else {
         this.textTitle = "Try again :( Pusheen is good at hiding";
         this.gameOver = true;
+        this.defeats++;
       }
     },
     resetGame() {

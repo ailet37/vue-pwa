@@ -1,32 +1,26 @@
 <template>
-  <div>
     <!-- <ul>
       <li v-for="(link, index) in links" :key="index">
         <router-link :to="link.to">{{ link.name }}</router-link>
       </li>
-    </ul> -->
+    </ul>-->
     <main>
       <router-view/>
     </main>
-  </div>
 </template>
 
-<style scoped lang="scss">
-  ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-  }
-  li {
-    padding: 5px 15px 5px 0;
-  }
-  li a {
-    text-decoration: none;
-    color: black;
-  }
-  li a:hover {
-    color: #404040;
-  }
+<style lang="scss">
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 </style>
 
 <script>
@@ -34,14 +28,14 @@ export default {
   data: () => ({
     links: [
       {
-        name: 'Home',
-        to: '/'
+        name: "Home",
+        to: "/"
       },
       {
-        name: 'Bad Link',
-        to: '/random-bad-url'
+        name: "Bad Link",
+        to: "/random-bad-url"
       }
     ]
   })
-}
+};
 </script>
